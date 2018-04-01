@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html>
+
+
+
+
+<head>
+
+	<!--#list li means it's looking for an HTML element with the ID of "list" and any child elements inside the #list element and it will apply the styling from the properties we've writtenç
+		Selectors in the first ID must be separated with commas, they can be one next to the other-->
+	<link rel="stylesheet" type="text/css" href="C:\Users\sofi\Desktop\html\ImHere.css">
+
+	<title>hello</title>
+
+	<style>
+		
+		h1{
+			color:red;
+		}
+
+			
+		p{
+			color:blue; 
+		}
+
+		.green{ color:green; }
+
+		#yellow{ color:yellow; }
+
+		.idk{ color:#FFE4C4;
+			  background-color:#A0522D;
+			  font-size: 40px; 
+			  font-style: oblique;	
+			  font-family: "Times New Roman", Times, serif;
+			}
+
+		.DivClass{
+
+			width: 50%;
+			background-color:#9370DB;
+		}
+
+	</style>
+
+</head>
+
+
+<body>
+
+	<header>
+		
+		<ul class="ul">
+			
+			<li class="li">First</li>
+			<li class="li">Second</li>
+			<li class="li">Third</li>
+
+		</ul>
+
+	</header>
+
+
+
+		<!-- asi es como se puede hacer cada p, etc- de tal color
+			los comentarios no pueden ir adentro de style
+			https://www.w3schools.com/cssref/css_colors.asp
+
+			font-style es para cambiar entre normal, italic, y oblique o inherit, initial, y unset
+
+			font-family: start with the font you want and always end with a generic family, to let the browser pick a similar font in the generic family, if no other fonts are available.
+
+			You separate each value with a comma and if a font name contains white-space, it must be quoted, single quotes must be used when using the "style" attribute in HTML https://www.w3schools.com/cssref/css_websafe_fonts.asp-->
+	
+
+	<div class="DivClass">
+
+		<h1>Hola</h1>
+
+		</br>
+
+		<p class="green" id="yellow">todo bien?</p> <!--le va a hacer caso a la class, no al p declarado en style, lo mismo con el id => ID > Class > p-->
+
+		<h2 class="idk">we invite you to sth</h2> <!--class overwrites even h2 and stuff like that-->
+
+		<span class="idk">We invite you to sth</span>
+
+		</br>
+
+		<ul id="list">
+			<li class="first">First</li>
+			<li class="second">Second</li>
+			<li class="third">Third</li>
+			<li>No class applied</li>
+		</ul>
+
+	</div>
+
+	</br>
+
+	<img src="C:\Users\sofi\Desktop\html\box model.jpg" style="margin-left: 38%;" >
+
+	</br>
+
+	<ul style="margin-left: 30%">
+		<li>Margin will be represented by the <code style="background-color: #DCDCDC;">margin</code> property, which adds spacing outside the border</li>
+		<li>Border will be represented by the <code style="background-color: #DCDCDC;">border</code> property, which is the section between the margin and the padding</li>
+		<li>Padding will be represented by the <code style="background-color: #DCDCDC;">padding</code> property, which adds spacing inside the border</li>
+		<li>The content is where your next HTML element will go, it can be text or HTML, either way it will be cushioned by the padding, border, and margin</li>
+	</ul>
+
+	Here's an example:
+
+	<div class="box">
+
+		<div class="content">
+
+			There's padding outside and inside the black box
+
+		</div>
+
+	</div>
+
+	<!-- margin: 10px; = margin: 10px 10px 10px 10px; 
+		 padding: 10px; = padding: 10px 10px 10px 10px;
+
+		 margin/padding: top right bottom left; CLOCKWISE-->
+
+
+	</br>
+	</br>
+
+	<div class="paddingExample" style="border-radius: 5px;">
+
+		&larr; &rarr; <!-- el inline-block es usado para que parezca como un span -->
+
+	</div>
+
+	</br>
+
+	<div class="paddingExample2">
+		
+		&larr; &rarr;
+
+	</div>
+
+	<h3 title="pink yo" style="color: rgba(255, 140, 255, 0.5);">RGBA: Red, Green, Blue, Alpha(opacity)</h3> <!-- alpha is great for making colors lighter or translucent. for the use of RGBA, you'll need to know the values you will input, you can google that. -->
+
+	</br>
+
+	Link que no es azul: <a target="_blank" href="https://google.com">Google</a> <!--
+	a:hover      cambia el color del link cuando hovereas over it
+	a:link       to define the link styling
+	a:visited    to define de styling when a link has already been clicked
+	a:active     to define the styling when you've clicked on the link, but haven't let go yet-->
+
+
+	</br>
+	</br>
+
+	<h1 class="one-third">Large title/titties</h1>
+	<a target="_blank" href="#" class="b-red one-third">beside a link</a> <!--href="#" opens the same page-->
+	<em class="b-red one-third">beside italics</em>
+
+
+
+	
+
+	<!-- When major browsers update, some functions in CSS will go in an experimental phase, thats why, as a prefix, you write these right before said functions/properties_
+
+		-webkit-  for Safari, Chrome and browsers using Webkit engine 
+		-moz-     for Firefox and other browsers using Mozilla's browser engine
+		-ms-	  for Internet Explorer (but not always)
+		-o-       for Opera
+
+		We can check if we have to vendor prefix here: http://shouldiprefix.com 
+
+		ej: -webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			-o-border-radius: 10px;  -->
+
+	<!-- maybe due to nesting or a messy code, some things will not change even though you add values or change them, that is why !important exists, which tells your CSS to "ignore everything else, just apply this" and "never change this value, it's too important", but it is recommended to not use it, and instead rewrite the code, another solution is BEM:http://getbem.com/ -->
+
+	</br>
+	</br>
+
+	<div class="box"> 
+		
+		Overflow: asssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+
+	</div>
+
+	</br>
+	</br>
+
+	<div class="parent">
+
+		<div class="child">
+			
+
+
+		</div>
+
+
+	</div>
+	
+
+</body>
+
+
+
+
+
+</html>
+
+
+
+
+
