@@ -1,0 +1,217 @@
+#list {background-color: red;}
+.first,
+.second,
+.third {
+	background-color: blue;
+	font-weight: bold;
+	color: #fff;
+}
+
+#list li{
+	border: 2px solid black;
+	border-radius: 10px;
+}
+
+.box{
+	border: 2px solid black;
+	padding: 50px;
+	margin:50px;
+}
+
+.content{
+	background-color: yellow;
+}
+
+.paddingExample{
+	display: inline-block;
+	border: 1px solid black;
+	padding: 10px 20px 30px 40px;
+}
+
+.paddingExample2{
+	display: inline-block;
+	border: 1px solid black;
+	padding-top: 100px;
+	margin-top: 10px;
+}
+
+a{
+	color: black;
+
+}
+
+a:hover{
+	color: rgba(255, 140, 255, 0.5);
+}
+
+a:link{
+	color:#CD5C5C;
+}
+
+a:visited{
+	color:#66CDAA;
+}
+
+a:active{
+	color: #778899;
+}
+
+.ul{
+	background-color: #ccc;
+	padding:17px;
+	margin: 0;
+	list-style: none; /*remove bullet points*/
+
+}
+
+.li{
+	display: inline-block;
+	width: 32%;
+	text-align: center;
+	font-family: 'Arial', sans-serif;
+	font-size: 20px;
+	opacity: 0.5; /*50% de opacity*/
+	transition: opacity 500ms linear; /*500ms=0.5secs transition set on the opacity property. now it will take half a sec to fade in or fade out. CSS3 property wont work on older browsers.*/
+}
+
+li:hover{
+	opacity: 1;
+}
+
+.b-red{
+	border: 1px solid red;
+}
+
+.one-third{
+	display: inline-block;
+	width: 32%;
+}
+
+.box{
+	display: block;
+	border: 1px solid black;
+	width: 50%;
+	height: 50%;
+	margin: 0 auto; /*to center a block element with CSS you want to set the margin-left and margin-right properties to auto*/
+	overflow: hidden; /*it can also be visible, scroll, auto, initial or inherit*/
+}
+
+.parent{
+	width: 200px;
+	height: 200px;
+	border: 1px solid black;
+	margin: 0 auto;
+	background-color: red;
+	padding: 50px;
+	background-image: url(http://superawesomevectors.com/wp-content/uploads/2013/02/nice-floral-pattern.jpg);
+	border-radius: 7px;
+}
+
+.child{
+	width: 200px;
+	height: 200px;
+	opacity: 0;
+	background-color: white;
+	border: 1px solid black;
+	transition: opacity 500ms ease;
+	background-image: url(https://68.media.tumblr.com/c956dcec764f6d23343b97a44914a031/tumblr_mky9txGfAE1s92xmno1_1280.jpg);
+	background-size: cover; /*adjusts image to size even if it stretches it out*/
+	box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5); /*adds shadow inside the .child element*/
+}
+
+.parent:hover .child{ /*= Select the .parent element, when the mouse hovers over it select the .child element and style it with the properties between the brackets
+							.Since we added the transition effect to .child, it will also smoothly fade in and out*/
+	opacity: 1;
+}
+
+
+.box2{
+	border: 1px solid red;
+	margin-bottom: 30px;
+}
+
+.relative{
+	border: 1px solid blue;
+	position: relative;
+	top: 12px;
+}
+
+.pparent{				/* for absolute positioning, it has to be a child element to a relative position parent element*/
+	display: block;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	border: 1px solid black;
+	position: relative;
+}
+
+.cchild{
+	position: absolute;
+	top: 0;  /*the top, left, bottom, and right tell the browser where the absolute element should be positioned, you can set all for at the same time too*/
+	left: 0;
+	width: 50%;
+	height: 50%;
+	background-color: yellow;
+}
+
+.cchild2{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 50%;
+	height: 50%;
+	background-color: purple;
+}
+
+.navbar{ /*the position: fixed; will make the element sticky, it will stick to wherever you want it to and never move, ex: floating navbar*/
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.container{
+	position: relative;
+	display: block;
+	width: 200px;
+	height: 200px;
+	background-color: rgba(0, 0, 0, 0.2);
+	border: 1px dashed rgba(0, 0, 0, 0.5);
+	margin: 0 auto;
+}
+
+/* grouping selectors, we'll overwrite .layer2 later*/
+.layer1,
+.layer2{
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	height: 50%;
+	width: 50%;
+	border: 1px dotted #000;
+	background-color: green;
+	opacity: 0.7;
+	z-index: 2; /*adds depth, if you want one of these two layers to be on top, simply change the value*/
+}
+
+/*overwrite layer2 properties */
+.layer2{
+	background-color: red;
+	top: 35%;
+	left: 35%;
+	opacity: 1;
+	z-index: 1;
+}
+
+/*visibility*/
+.red-block {
+	background-color: red;
+}
+
+.blue-block{
+	background-color: blue;
+	opacity: 0; /*since there's still space between the two red lines, the blue line is not hidden, just not visible*/
+	visibility: hidden; /*works as opacity: 0;*/
+	display: none; /*this is to completely hide it*/
+
+}
